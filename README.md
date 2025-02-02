@@ -1,50 +1,162 @@
-# Welcome to your Expo app 👋
+# Documentation du Projet Here (Application de rencontre style Tinder)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Structure du Projet
 
-## Get started
+Le projet suit une architecture basée sur Expo Router avec les dossiers principaux suivants :
 
-1. Install dependencies
+- `app/` : Contient la logique principale de l'application
+  - `(auth)/` : Routes d'authentification
+  - `(tabs)/` : Routes principales de l'application
+  - `chat/` : Gestion des conversations
+  - `components/` : Composants spécifiques
+  - `data/` : Données mockées
+- `assets/` : Ressources statiques (images, fonts)
+- `components/` : Composants UI réutilisables
 
-   ```bash
-   npm install
-   ```
+## Fichiers de Configuration
 
-2. Start the app
+### babel.config.js
 
-   ```bash
-    npx expo start
-   ```
+Configuration de Babel pour NativeWind et Expo.
 
-In the output, you'll find options to open the app in a
+### tailwind.config.js
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Configure Tailwind CSS pour React Native :
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- Scanning des fichiers pour les classes
+- Preset NativeWind
+- Configuration du thème
 
-## Get a fresh project
+### metro.config.js
 
-When you're ready, run:
+Bundler Metro pour Expo :
 
-```bash
-npm run reset-project
-```
+- Support NativeWind
+- Transformations CSS
+- Gestion des assets
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### app.json
 
-## Learn more
+Configuration Expo :
 
-To learn more about developing your project with Expo, look at the following resources:
+- Nom et version
+- Configuration iOS/Android
+- Splash screen
+- Plugins
+- Build settings
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### eas.json
 
-## Join the community
+Configuration EAS :
 
-Join our community of developers creating universal apps.
+- Profils de build
+- Distribution
+- Versioning
+- Soumission stores
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Dépendances Principales
+
+### Navigation
+
+- `expo-router`
+- `@react-navigation/native`
+
+### UI/Styling
+
+- `nativewind`
+- `react-native-reanimated`
+- `react-native-deck-swiper`
+- `expo-linear-gradient`
+
+### Utilitaires
+
+- `date-fns`
+- `lucide-react-native`
+
+## Fonctionnalités Clés
+
+1. **Authentification**
+
+   - Login stylisé
+   - Navigation sécurisée
+
+2. **Swipe**
+
+   - Cartes swipables
+   - Animations fluides
+   - Like/Dislike
+
+3. **Messagerie**
+
+   - Liste conversations
+   - Chat temps réel
+   - Statuts
+
+4. **Profil**
+   - Infos utilisateur
+   - Édition
+   - Settings
+
+## Style et Design
+
+- NativeWind (Tailwind)
+- Dégradés cohérents
+- Animations fluides
+- Design responsive
+- Mode sombre
+
+## Points Techniques
+
+1. **Architecture**
+
+   - Modulaire
+   - Séparation des responsabilités
+   - Composants réutilisables
+
+2. **Performance**
+
+   - Lazy loading
+   - Animations optimisées
+   - Gestion assets
+
+3. **Maintenance**
+   - TypeScript
+   - Structure claire
+   - Config centralisée
+
+## Bonnes Pratiques
+
+1. **Code**
+
+   - TypeScript
+   - Réutilisabilité
+   - Nommage cohérent
+
+2. **Structure**
+
+   - Organisation claire
+   - Responsabilités séparées
+   - Config modulaire
+
+3. **Style**
+   - Tailwind cohérent
+   - Thème
+   - Responsive
+
+## Déploiement
+
+Via EAS :
+
+- Dev builds
+- Preview builds
+- Production builds
+- iOS/Android config
+
+## Conclusion
+
+Application moderne avec :
+
+- Architecture React Native/Expo
+- UX fluide
+- Code maintenable
+- Évolutivité
